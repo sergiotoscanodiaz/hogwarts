@@ -11,10 +11,10 @@
   <body>
     <%
       Class.forName("com.mysql.jdbc.Driver");
-      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","admin", "1234");
+      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/hogwarts","admin", "1234");
       Statement s = conexion.createStatement();
 
-      s.execute ("DELETE FROM socio WHERE socioID=" + request.getParameter("socioID"));
+      s.execute ("DELETE FROM alumno WHERE Código_Alumno=" + request.getParameter("Código_Alumno"));
       
       s.close();
     %>	

@@ -13,34 +13,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    <title>Club de Baloncesto - Luis José Sánchez</title>
+    <title>Hogwarts</title>
   </head>
   <body>
     <%
       Class.forName("com.mysql.jdbc.Driver");
-      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","admin", "1234");
+      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/hogwarts","admin", "1234");
       Statement s = conexion.createStatement();
 
       request.setCharacterEncoding("UTF-8");
       
-      // Comprueba la existencia del número de socio introducido
-      String consultaNumSocio = "SELECT * FROM socio WHERE socioID="
-                                + Integer.valueOf(request.getParameter("socioID"));      
+      // Comprueba la existencia del número de alumno introducido
+      String consultaNumAlumno = "SELECT * FROM Código_Alumno WHERE Código_Alumno="
+                                + Integer.valueOf(request.getParameter("Código_Alumno"));      
       
-      ResultSet numeroDeSocios = s.executeQuery (consultaNumSocio);
-      numeroDeSocios.last();
+      ResultSet numeroDeAlumnos = s.executeQuery (consultaNumAlumno);
+      numeroDeAlumnos.last();
       
-      if (numeroDeSocios.getRow() != 0) {
-        out.println("Lo siento, no se ha podido dar de alta, ya existe un socio con el número "
-                    + request.getParameter("socioID") + ".");
+      if (numeroDeAlumnos.getRow() != 0) {
+        out.println("Lo siento, no se ha podido dar de alta, ya existe un alumno de este primer año con el número "
+                    + request.getParameter("Código_Alumno") + ".");
       } else {
-        String insercion = "INSERT INTO socio VALUES (" + Integer.valueOf(request.getParameter("socioID"))
+        String insercion = "INSERT INTO alumno VALUES (" + Integer.valueOf(request.getParameter("Código_Alumno"))
                            + ", '" + request.getParameter("nombre")
-                           + "', " + Integer.valueOf(request.getParameter("estatura"))
-                           + ", " + Integer.valueOf(request.getParameter("edad"))
-                           + ", '" + request.getParameter("localidad") + "')";
+                           + "', " + Integer.valueOf(request.getParameter("Código_Alumno"));
+        
         s.execute(insercion);
-        out.println("Socio dado de alta correctamente.");
+        out.println("Alumno dado de alta en Hogwarts correctamente. ");
       }
       conexion.close();
     %>
