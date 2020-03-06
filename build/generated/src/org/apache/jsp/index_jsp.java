@@ -60,11 +60,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\" integrity=\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\" crossorigin=\"anonymous\">\n");
       out.write("    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\" integrity=\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\" crossorigin=\"anonymous\"></script>\n");
       out.write("\n");
-      out.write("    <title> Alumnos de Primer Año en Hogwarts - Sergio Toscano Díaz</title>\n");
+      out.write("    <title>Hogwarts</title>\n");
       out.write("  </head>\n");
       out.write("\n");
       out.write("  <body>\n");
-      out.write("\t\t<div class=\"container\">\n");
+      out.write("  <div class=\"container\">\n");
       out.write("\t\t\t<br><br>\t\t\t\n");
       out.write("      <div class=\"panel panel-primary\">\n");
       out.write("        <div class=\"panel-heading text-center\"><h2>Alumnos de Primer Año en Hogwarts</h2></div>\n");
@@ -80,10 +80,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <table class=\"table table-striped\">\n");
       out.write("        <tr><th>Nº de alumno</th><th>Nombre</th><th>Nº de casa</th></tr>\n");
-      out.write("        <form method=\"get\" action=\"grabaSocio.jsp\">\n");
-      out.write("          <tr><td><input type=\"text\" name=\"Nº de alumno\" size=\"5\"></td>\n");
+      out.write("        <form method=\"get\" action=\"grabaAlumno.jsp\">\n");
+      out.write("          <tr><td><input type=\"text\" name=\"Código_Alumno\" size=\"5\"></td>\n");
       out.write("              <td><input type=\"text\" name=\"nombre\" size=\"50\"></td>\n");
-      out.write("              <td><input type=\"text\" name=\"Nº de casa\" size=\"5\"></td>              \n");
+      out.write("              <td><input type=\"text\" name=\"Código_Casa\" size=\"5\"></td>              \n");
       out.write("              <td><button type=\"submit\" value=\"Añadir\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Añadir</button></td><td></td></tr>           \n");
       out.write("        </form>\n");
       out.write("        ");

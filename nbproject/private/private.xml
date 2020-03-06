@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/usuario/NetBeansProjects/PruebaBaseDeDatos/web/borraSocio.jsp</file>
+            <file>file:/home/usuario/NetBeansProjects/Hogwarts/web/grabaAlumnoModificado.jsp</file>
+            <file>file:/home/usuario/NetBeansProjects/Hogwarts/web/borraAlumno.jsp</file>
+            <file>file:/home/usuario/NetBeansProjects/Hogwarts/web/modificaAlumno.jsp</file>
+            <file>file:/home/usuario/NetBeansProjects/Hogwarts/web/grabaAlumno.jsp</file>
+            <file>file:/home/usuario/NetBeansProjects/Hogwarts/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -24,7 +24,7 @@
       request.setCharacterEncoding("UTF-8");
       
       // Comprueba la existencia del número de alumno introducido
-      String consultaNumAlumno = "SELECT * FROM Código_Alumno WHERE Código_Alumno="
+      String consultaNumAlumno = "SELECT * FROM alumno WHERE Código_Alumno="
                                 + Integer.valueOf(request.getParameter("Código_Alumno"));      
       
       ResultSet numeroDeAlumnos = s.executeQuery (consultaNumAlumno);
@@ -34,9 +34,10 @@
         out.println("Lo siento, no se ha podido dar de alta, ya existe un alumno de este primer año con el número "
                     + request.getParameter("Código_Alumno") + ".");
       } else {
-        String insercion = "INSERT INTO alumno VALUES (" + Integer.valueOf(request.getParameter("Código_Alumno"))
+        String insercion = "INSERT INTO alumno (Código_Alumno, nombre, Código_Casa) VALUES (" + Integer.parseInt(request.getParameter("Código_Alumno"))
                            + ", '" + request.getParameter("nombre")
-                           + "', " + Integer.valueOf(request.getParameter("Código_Alumno"));
+                           + "', " + Integer.parseInt(request.getParameter("Código_Casa"))
+                           + ")";
         
         s.execute(insercion);
         out.println("Alumno dado de alta en Hogwarts correctamente. ");

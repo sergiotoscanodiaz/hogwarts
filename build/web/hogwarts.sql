@@ -31,7 +31,6 @@ USE `hogwarts`;
 CREATE TABLE IF NOT EXISTS casa (
   Código_Casa int(11) NOT NULL,
   nombre varchar(40) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  características varchar(60) COLLATE utf8_spanish2_ci DEFAULT NULL,
   PRIMARY KEY (Código_Casa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -40,7 +39,7 @@ CREATE TABLE IF NOT EXISTS casa (
 --
 
 CREATE TABLE IF NOT EXISTS alumno (
-  Código_ALumno int(11) NOT NULL,
+  Código_Alumno int(11) NOT NULL,
   nombre varchar(40) COLLATE utf8_spanish2_ci DEFAULT NULL,
   Código_Casa int(11) NOT NULL,
   PRIMARY KEY (Código_Alumno),
@@ -51,11 +50,11 @@ CREATE TABLE IF NOT EXISTS alumno (
 -- Volcado de datos para la tabla `casa`
 --
 
-INSERT INTO `casa` (`Código_Casa`, `nombre`, `características`) VALUES
-(1, 'Gryffindor', 'Osadía, caballerosidad y valentía'),
-(2, 'Hufflepuff', 'Honestidad, paciencia y lealtad'),
-(3, 'Ravenclaw', 'Inteligencia, creatividad y curiosidad'),
-(4, 'Slytherin', 'Ambición, determinación y astucia');
+INSERT INTO `casa` (`Código_Casa`, `nombre`) VALUES
+(1, 'Gryffindor'),
+(2, 'Hufflepuff'),
+(3, 'Ravenclaw'),
+(4, 'Slytherin');
 
 --
 -- Volcado de datos para la tabla `alumno`
