@@ -14,7 +14,7 @@
       Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/hogwarts","admin", "1234");
       Statement s = conexion.createStatement();
 
-      s.execute ("DELETE FROM alumno WHERE Código_Alumno=" + request.getParameter("Código_Alumno"));
+      s.execute ("DELETE FROM alumno WHERE codigoAlumno=" + request.getParameter("codigoAlumno"));
       
       s.close();
     %>	

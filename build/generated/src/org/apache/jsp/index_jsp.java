@@ -81,38 +81,38 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <table class=\"table table-striped\">\n");
       out.write("        <tr><th>Nº de alumno</th><th>Nombre</th><th>Nº de casa</th></tr>\n");
       out.write("        <form method=\"get\" action=\"grabaAlumno.jsp\">\n");
-      out.write("          <tr><td><input type=\"text\" name=\"Código_Alumno\" size=\"5\"></td>\n");
+      out.write("          <tr><td><input type=\"text\" name=\"codigoAlumno\" size=\"5\"></td>\n");
       out.write("              <td><input type=\"text\" name=\"nombre\" size=\"50\"></td>\n");
-      out.write("              <td><input type=\"text\" name=\"Código_Casa\" size=\"5\"></td>              \n");
+      out.write("              <td><input type=\"text\" name=\"codigoCasa\" size=\"5\"></td>              \n");
       out.write("              <td><button type=\"submit\" value=\"Añadir\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-plus\"></span> Añadir</button></td><td></td></tr>           \n");
       out.write("        </form>\n");
       out.write("        ");
 
           while (listado.next()) {
             out.println("<tr><td>");
-            out.println(listado.getString("Código_Alumno") + "</td>");
+            out.println(listado.getString("codigoAlumno") + "</td>");
             out.println("<td>" + listado.getString("nombre") + "</td>");
-            out.println("<td>" + listado.getString("Código_Casa") + "</td>");           
+            out.println("<td>" + listado.getString("codigoCasa") + "</td>");           
         
       out.write("\n");
       out.write("        <td>\n");
       out.write("        <form method=\"get\" action=\"modificaAlumno.jsp\">\n");
-      out.write("\t  <input type=\"hidden\" name=\"Código Alumno\" value=\"");
-      out.print(listado.getString("Código_Alumno") );
+      out.write("\t  <input type=\"hidden\" name=\"codigoAlumno\" value=\"");
+      out.print(listado.getString("codigoAlumno") );
       out.write("\">\n");
       out.write("          <input type=\"hidden\" name=\"nombre\" value=\"");
       out.print(listado.getString("nombre") );
       out.write("\">\n");
-      out.write("          <input type=\"hidden\" name=\"Código_Casa\" value=\"");
-      out.print(listado.getString("Código_Casa") );
+      out.write("          <input type=\"hidden\" name=\"codigoCasa\" value=\"");
+      out.print(listado.getString("codigoCasa") );
       out.write("\">\n");
       out.write("          <button type=\"submit\"  class=\"btn btn-info\"><span class=\"glyphicon glyphicon-pencil\"></span> Modificar</button>\n");
       out.write("\t</form>\n");
       out.write("\t</td>\n");
       out.write("\t<td>\n");
       out.write("        <form method=\"get\" action=\"borraAlumno.jsp\">\n");
-      out.write("          <input type=\"hidden\" name=\"Código_Alumno\" value=\"");
-      out.print(listado.getString("Código_Alumno") );
+      out.write("          <input type=\"hidden\" name=\"codigoAlumno\" value=\"");
+      out.print(listado.getString("codigoAlumno") );
       out.write("\"/>\n");
       out.write("          <button type=\"submit\" class=\"btn btn-danger\"><span class=\"glyphicon glyphicon-remove\"></span> Eliminar</button>\n");
       out.write("        </form>\n");

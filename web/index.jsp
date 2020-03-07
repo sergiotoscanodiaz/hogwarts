@@ -32,29 +32,29 @@
         <table class="table table-striped">
         <tr><th>Nº de alumno</th><th>Nombre</th><th>Nº de casa</th></tr>
         <form method="get" action="grabaAlumno.jsp">
-          <tr><td><input type="text" name="Código_Alumno" size="5"></td>
+          <tr><td><input type="text" name="codigoAlumno" size="5"></td>
               <td><input type="text" name="nombre" size="50"></td>
-              <td><input type="text" name="Código_Casa" size="5"></td>              
+              <td><input type="text" name="codigoCasa" size="5"></td>              
               <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Añadir</button></td><td></td></tr>           
         </form>
         <%
           while (listado.next()) {
             out.println("<tr><td>");
-            out.println(listado.getString("Código_Alumno") + "</td>");
+            out.println(listado.getString("codigoAlumno") + "</td>");
             out.println("<td>" + listado.getString("nombre") + "</td>");
-            out.println("<td>" + listado.getString("Código_Casa") + "</td>");           
+            out.println("<td>" + listado.getString("codigoCasa") + "</td>");           
         %>
         <td>
         <form method="get" action="modificaAlumno.jsp">
-	  <input type="hidden" name="Código Alumno" value="<%=listado.getString("Código_Alumno") %>">
+	  <input type="hidden" name="codigoAlumno" value="<%=listado.getString("codigoAlumno") %>">
           <input type="hidden" name="nombre" value="<%=listado.getString("nombre") %>">
-          <input type="hidden" name="Código_Casa" value="<%=listado.getString("Código_Casa") %>">
+          <input type="hidden" name="codigoCasa" value="<%=listado.getString("codigoCasa") %>">
           <button type="submit"  class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Modificar</button>
 	</form>
 	</td>
 	<td>
         <form method="get" action="borraAlumno.jsp">
-          <input type="hidden" name="Código_Alumno" value="<%=listado.getString("Código_Alumno") %>"/>
+          <input type="hidden" name="codigoAlumno" value="<%=listado.getString("codigoAlumno") %>"/>
           <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
         </form>
         </td>

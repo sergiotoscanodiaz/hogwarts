@@ -24,19 +24,19 @@
       request.setCharacterEncoding("UTF-8");
       
       // Comprueba la existencia del número de alumno introducido
-      String consultaNumAlumno = "SELECT * FROM alumno WHERE Código_Alumno="
-                                + Integer.valueOf(request.getParameter("Código_Alumno"));      
+      String consultaNumAlumno = "SELECT * FROM alumno WHERE codigoAlumno="
+                                + Integer.valueOf(request.getParameter("codigoAlumno"));      
       
       ResultSet numeroDeAlumnos = s.executeQuery (consultaNumAlumno);
       numeroDeAlumnos.last();
       
       if (numeroDeAlumnos.getRow() != 0) {
         out.println("Lo siento, no se ha podido dar de alta, ya existe un alumno de este primer año con el número "
-                    + request.getParameter("Código_Alumno") + ".");
+                    + request.getParameter("codigoAlumno") + ".");
       } else {
-        String insercion = "INSERT INTO alumno (Código_Alumno, nombre, Código_Casa) VALUES (" + Integer.parseInt(request.getParameter("Código_Alumno"))
+        String insercion = "INSERT INTO alumno (codigoAlumno, nombre, codigoCasa) VALUES (" + Integer.parseInt(request.getParameter("codigoAlumno"))
                            + ", '" + request.getParameter("nombre")
-                           + "', " + Integer.parseInt(request.getParameter("Código_Casa"))
+                           + "', " + Integer.parseInt(request.getParameter("codigoCasa"))
                            + ")";
         
         s.execute(insercion);

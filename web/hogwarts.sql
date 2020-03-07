@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `baloncesto`
+-- Base de datos: `hogwarts`
 --
 CREATE DATABASE IF NOT EXISTS `hogwarts` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `hogwarts`;
@@ -29,9 +29,9 @@ USE `hogwarts`;
 --
 
 CREATE TABLE IF NOT EXISTS casa (
-  Código_Casa int(11) NOT NULL,
+  codigoCasa int(11) NOT NULL,
   nombre varchar(40) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  PRIMARY KEY (Código_Casa)
+  PRIMARY KEY (codigoCasa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
@@ -39,18 +39,18 @@ CREATE TABLE IF NOT EXISTS casa (
 --
 
 CREATE TABLE IF NOT EXISTS alumno (
-  Código_Alumno int(11) NOT NULL,
+  codigoAlumno int(11) NOT NULL,
   nombre varchar(40) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  Código_Casa int(11) NOT NULL,
-  PRIMARY KEY (Código_Alumno),
-  FOREIGN KEY (Código_Casa) REFERENCES casa (Código_Casa)
+  codigoCasa int(11) NOT NULL,
+  PRIMARY KEY (codigoAlumno),
+  FOREIGN KEY (codigoCasa) REFERENCES casa (codigoCasa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `casa`
 --
 
-INSERT INTO `casa` (`Código_Casa`, `nombre`) VALUES
+INSERT INTO `casa` (`codigoCasa`, `nombre`) VALUES
 (1, 'Gryffindor'),
 (2, 'Hufflepuff'),
 (3, 'Ravenclaw'),
@@ -60,7 +60,7 @@ INSERT INTO `casa` (`Código_Casa`, `nombre`) VALUES
 -- Volcado de datos para la tabla `alumno`
 --
 
-INSERT INTO `alumno` (`Código_Alumno`, `nombre`, `Código_Casa`) VALUES
+INSERT INTO `alumno` (`codigoAlumno`, `nombre`, `codigoCasa`) VALUES
 (1, 'James Potter, Harry', 1),
 (2, 'Bilius Weasley, Ronald', 1),
 (3, 'Jean Granger, Hermione', 1),

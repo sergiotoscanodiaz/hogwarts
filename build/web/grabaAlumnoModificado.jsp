@@ -24,10 +24,10 @@
       request.setCharacterEncoding("UTF-8");
       
       String actualizacion = "UPDATE alumno SET "
-                           + "Nº de alumno=" + Integer.valueOf(request.getParameter("Código_Alumno"))
-                           + "nombre='" + request.getParameter("nombre")
-                           + "', Nº de casa=" + Integer.valueOf(request.getParameter("Código_Casa"))
-                           + "' WHERE Código_Alumno=" + Integer.valueOf(request.getParameter("Código_Alumno"));
+                           + "Nº de alumno=" + Integer.parseInt(request.getParameter("codigoAlumno"))
+                           + "',nombre='" + request.getParameter("nombre")
+                           + "', Nº de casa=" + Integer.parseInt(request.getParameter("codigoCasa"))
+                           + "' WHERE codigoAlumno=" + Integer.parseInt(request.getParameter("codigoAlumno"));
       s.execute(actualizacion);
       out.println("Alumno actualizado correctamente.");
       

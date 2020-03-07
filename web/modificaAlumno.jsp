@@ -19,13 +19,13 @@
         <div class="panel-heading text-center">Modificación de alumno</div>
           <form method="get" action="grabaAlumnoModificado.jsp">
             <div class="form-group"> 
-              <label>&nbsp;&nbsp;Nº de alumno:&nbsp;</label><input type="text" size="5" name="Código_Alumno" value="<%= request.getParameter("Código_Alumno") %>" >
+              <label>&nbsp;&nbsp;Nº de alumno:&nbsp;</label><input type="text" size="5" name="codigoAlumno" value="<%= request.getParameter("codigoAlumno") %>" >
             </div>
             <div class="form-group">
             <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre") %>">
             </div>
             <div class="form-group">
-             <label>&nbsp;&nbsp;Nº de casa:&nbsp;</label><input type="text" name="Código_Casa" size="20" value="<%= request.getParameter("Código_Casa") %>">
+             <label>&nbsp;&nbsp;Nº de casa:&nbsp;</label><input type="text" name="codigoCasa" size="5" value="<%= request.getParameter("codigoCasa") %>">
             </div>
             <hr>
             &nbsp;&nbsp;<a href="index.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
