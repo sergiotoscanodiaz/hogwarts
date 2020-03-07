@@ -1,3 +1,4 @@
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
@@ -23,12 +24,21 @@
 
       request.setCharacterEncoding("UTF-8");
       
-      String actualizacion = "UPDATE alumno SET "
-                           + "Nº de alumno=" + Integer.parseInt(request.getParameter("codigoAlumno"))
-                           + "',nombre='" + request.getParameter("nombre")
-                           + "', Nº de casa=" + Integer.parseInt(request.getParameter("codigoCasa"))
+      String sql = "Update alumno SET nombre=?, codigoCasa=? WHERE codigoAlumno=?";
+      
+      PreparedStatement preparedStatement = conexion.prepareStatement(sql);
+      
+      preparedStatement.setString(1, request.getParameter("nombre"));
+      preparedStatement.setString(2, request.getParameter("codigoCasa"));
+      preparedStatement.setString(3, request.getParameter("codigoAlumno"));
+      
+      preparedStatement.executeUpdate();
+      /*String actualizacion = "UPDATE socio SET "
+                           + "nombre=''" + request.getParameter("nombre")
+                           + ", codigoCasa='" + request.getParameter("codigoCasa")
                            + "' WHERE codigoAlumno=" + Integer.parseInt(request.getParameter("codigoAlumno"));
-      s.execute(actualizacion);
+      
+      s.execute(actualizacion); */
       out.println("Alumno actualizado correctamente.");
       
       conexion.close();

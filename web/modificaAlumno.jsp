@@ -19,7 +19,7 @@
         <div class="panel-heading text-center">Modificación de alumno</div>
           <form method="get" action="grabaAlumnoModificado.jsp">
             <div class="form-group"> 
-              <label>&nbsp;&nbsp;Nº de alumno:&nbsp;</label><input type="text" size="5" name="codigoAlumno" value="<%= request.getParameter("codigoAlumno") %>" >
+              <label>&nbsp;&nbsp;Nº de alumno:&nbsp;</label><input type="text" size="5" name="codigoAlumno" value="<%= request.getParameter("codigoAlumno") %>" readonly >
             </div>
             <div class="form-group">
             <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre") %>">
