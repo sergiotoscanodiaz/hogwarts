@@ -24,5 +24,7 @@ Modificar alumno
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/modificando-alumno.png)
 
 ***
-Las casas corresponden con estos números: 1. Griffindor 2. Ravenclaw 3. Hufflepuff 4. Slytherin
+Las casas corresponden con estos números: 1. Griffyndor 2. Ravenclaw 3. Hufflepuff 4. Slytherin
+
+***
 Para iniciar sesión, usuario: sergio & contraseña: 1234
