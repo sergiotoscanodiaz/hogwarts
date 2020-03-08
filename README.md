@@ -1,27 +1,27 @@
 # Hogwarts
 ***
-DESCRIPCIÓN
+DESCRIPCIÓN:
 ***
 Aplicación que permitirá añadir, borrar y modificar personajes y casas del universo de Harry Potter.
 ***
-CAPTURAS
+CAPTURAS:
 ***
-Página principal:
+Página principal
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/p%C3%A1gina-principal.png)
 
-Inicio de sesión:
+Inicio de sesión
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/iniciar-sesi%C3%B3n.png)
 
-Perfil:
+Perfil
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/perfil.png)
 
-Añadiendo alumno:
+Añadiendo alumno
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/a%C3%B1adiendo-alumno.png)
 
-Alumno añadido:
+Alumno añadido
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/alumno-a%C3%B1adido.png)
 
-Modificar alumno:
+Modificar alumno
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/modificando-alumno.png)
 
 ***
