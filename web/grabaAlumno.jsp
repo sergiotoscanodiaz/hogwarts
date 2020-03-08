@@ -15,6 +15,7 @@
 
     <title>Hogwarts</title>
   </head>
+  
   <body>
     <%
       Class.forName("com.mysql.jdbc.Driver");

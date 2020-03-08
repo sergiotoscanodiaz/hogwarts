@@ -15,8 +15,35 @@
 
     <title>Hogwarts</title>
   </head>
+  
+  <style>
+      body {background-image: url("hogwarts.jpg");}
+  </style>
+  
 
   <body>
+  <div class="container">
+			<br><br>			
+      <div class="panel">
+        <div class="panel-heading text-center"><h2>Bienvenido a Hogwarts</h2></div>
+
+        <%
+          if (session.getAttribute("usuario") == null) {
+        %>
+            <a href="formulario-login.jsp">Entrar</a>
+        <%
+          } else {
+        %>
+        Logueado como <a href="perfil.jsp"><%= session.getAttribute("usuario") %></a>
+            (<a href="logout.jsp">Salir</a>)
+        <%
+        }
+        %>
+    
+        <p>
+          Página principal con información pública que puede ver cualquier usuario.
+        </p>
+     </div>
   <div class="container">
 			<br><br>			
       <div class="panel panel-primary">

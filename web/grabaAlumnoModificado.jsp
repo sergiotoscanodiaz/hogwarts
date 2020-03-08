@@ -33,12 +33,7 @@
       preparedStatement.setString(3, request.getParameter("codigoAlumno"));
       
       preparedStatement.executeUpdate();
-      /*String actualizacion = "UPDATE socio SET "
-                           + "nombre=''" + request.getParameter("nombre")
-                           + ", codigoCasa='" + request.getParameter("codigoCasa")
-                           + "' WHERE codigoAlumno=" + Integer.parseInt(request.getParameter("codigoAlumno"));
       
-      s.execute(actualizacion); */
       out.println("Alumno actualizado correctamente.");
       
       conexion.close();
