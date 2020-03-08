@@ -12,7 +12,6 @@ Página principal
 Inicio de sesión
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/iniciar-sesi%C3%B3n.png)
 
-Perfil
 ![alt-text](https://github.com/sergiotoscanodiaz/hogwarts/blob/master/perfil.png)
 
 Añadiendo alumno
