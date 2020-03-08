@@ -2,7 +2,7 @@
 ***
 DESCRIPCIÓN:
 ***
-Aplicación que permitirá añadir, borrar y modificar personajes y casas del universo de Harry Potter.
+Aplicación que permite añadir, borrar y modificar personajes y casas del universo de Harry Potter.
 ***
 CAPTURAS:
 ***
