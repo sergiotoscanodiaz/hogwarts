@@ -28,3 +28,6 @@ Las casas corresponden con estos números: 1. Gryffindor 2. Ravenclaw 3. Hufflep
 
 ***
 Para iniciar sesión, usuario: sergio & contraseña: 1234
+
+***
+VÍDEO EXPLICATIVO: https://www.youtube.com/watch?v=o-y0RmFYM0c
